@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "uada"
+version = "0.1.0"
+description = ""
+authors = ["uADA developer <uada@opshin.dev>"]
+readme = "README.md"
+packages = [{include = "uada"}]
+
+[tool.poetry.dependencies]
+python = ">=3.10, <3.12"
+opshin = "^0.20.0"
+fire = "^0.5.0"
+pycardano = {git = "https://github.com/OpShin/pycardano", rev = "running_fixes"}
+peewee = "^3.17.1"
+ogmios = "^0.4.0"
+fastapi = "^0.109.2"
+uvicorn = {extras = ["all"], version = "^0.27.1"}
+gelidum = "^0.7.0"
+fastapi-cache2 = "^0.2.1"
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.9.0"
+pytest = "^7.4.3"
+pre-commit = "^3.5.0"
+hypothesis = "^6.92.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
